@@ -1,1 +1,104 @@
-<mxfile host="app.diagrams.net" modified="2020-11-06T16:13:39.466Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="-r7yLQjkRcSbqTJg3dha" version="13.9.2" type="github"><diagram id="dqa7lNRxKlEO-pRqrmKs" name="Page-1">5VrdUqMwGH2aXupAArS91LbqzuqOa2fX9TJTUohLCYZgW59+g4QCBbrYv1C90JKPBJJzTs6XpO3AwWxxzVDg3lEbex2g2YsOHHYAAF2oiY84skwiuq6DJOIwYstYFhiTNyyDsqETERuHhYqcUo+ToBicUN/HE16IIcbovFhtSr3iWwPk4FJgPEFeOfpIbO4m0Z6pZfEbTBw3fbOuyTszlFaWgdBFNp3nQnDUgQNGKU+uZosB9mL0UlySdlc1d1cdY9jnTRo8T+YYBlM3mpHvw8uX+dtkMD7TDdk5vkxHjG0BgCxSxl3qUB95oyx6yWjk2zh+rCZKWZ1bSgMR1EXwGXO+lGyiiFMRcvnMk3dFj9nyT9z+3EyLT/Jx74XholBaylJ5yKkkEHMw3zBOKbp4bLmGEqhrTGdYvEdUYNhDnLwWyUdSQ86q3qrpPSWiK0CTgjdSvUu5g1Qn6SNCGrEJlq0yssRFrhtZ6J3Cj9BpnhKdeEF4rpkoPaVPFNdZo7jwXwkkyG7CpqFU4EGkcsEYWuYqBLEEwnolQa1aSVc19S19Y31xkfSgoW71I+vWOiXdbm9D5hexoeRtr8iL5BCGmMfZWfTAt8X/Cw+xmfh0MfJEmhQDJuHfsKSBjOGYrrlLOB4H6H2Wz8V6o8hmLSuvmHG82Ih3ul4BRdz0FLd5lvp1S8bcXNq3tHqKCuB+GMleCUoVM2V71wUNZ4a175mxE+zwc/jR3tgB3VbRA0qT4ldgI45jFDALY9DjR/hTeq7cU86soqdAUOEp4Jiekr7sZD0FNlRtr1WiNZSgfHxPacoO7LeKHliaFN/CMMLpYkX94sQ014wEKjeS8jrvtIzEbChVfe97wt2k2vsaTtKUHtAuJzFLs2K1+xkMlNsIMNpmI1b9as6jE0EY9WMVsBgU1eitnbIYVRvEQ4FnRo53HwxvDf5zPn7pPt4+Xmpnul7C5GiWuzbftpvkvR2nas1xWL9IlGmsEZCYysFOQMrb9vsodHMnHz8oJ1OSqFv92sKCCnW9MeXmEHzAgZBqO1wUgrYBBso2qs4ZtjqLaLwaa1W2B1XpPiROnLOQ+LsbDe8uxsoFW0r7yvXarU/79zcPygETDtS6Kd4vQfYbMzJdtgQyvds2xOAGxFqQRQyVgFUuJ9uURJosL/PJonJAipaX+/uCrXJUXRWs7HYAsBc2+5+SzeNvFkoWVUFHrWt11zbBlqbatQ7u8jvhtX5we0i8RDH7RVmiz+yHeXD0Dw==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-06T17:52:01.678Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="RZSci5X1mQr8YvzlBcon" version="13.9.1" type="github">
+  <diagram id="dqa7lNRxKlEO-pRqrmKs" name="Page-1">
+    <mxGraphModel dx="1888" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="jcwe3pfhumiKDBqwzcCS-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="250" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="jcwe3pfhumiKDBqwzcCS-1" target="jcwe3pfhumiKDBqwzcCS-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="250" />
+              <mxPoint x="610" y="250" />
+            </Array>
+            <mxPoint x="430" y="210" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="jcwe3pfhumiKDBqwzcCS-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="250" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-1" value="Detect and Alarm health risks" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="150" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jcwe3pfhumiKDBqwzcCS-2" target="jcwe3pfhumiKDBqwzcCS-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jcwe3pfhumiKDBqwzcCS-2" target="jcwe3pfhumiKDBqwzcCS-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-2" value="Update personal info." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-60" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jcwe3pfhumiKDBqwzcCS-3" target="jcwe3pfhumiKDBqwzcCS-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jcwe3pfhumiKDBqwzcCS-3" target="jcwe3pfhumiKDBqwzcCS-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-3" value="Handling Alarms" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jcwe3pfhumiKDBqwzcCS-5" target="jcwe3pfhumiKDBqwzcCS-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jcwe3pfhumiKDBqwzcCS-5" target="jcwe3pfhumiKDBqwzcCS-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-5" value="Detect CC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-6" value="Update location trace" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5uglPpDL4tQwSq7WLWB0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jcwe3pfhumiKDBqwzcCS-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-8" value="Push Alarm Notifications" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-13" value="Report CC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jcwe3pfhumiKDBqwzcCS-25" target="jcwe3pfhumiKDBqwzcCS-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-25" value="Design a MEDMAS" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-27" value="Update PHR" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-130" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-29" value="Verify PHR" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jcwe3pfhumiKDBqwzcCS-39" value="Verify CC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="470" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5uglPpDL4tQwSq7WLWB0-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="5uglPpDL4tQwSq7WLWB0-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="540" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5uglPpDL4tQwSq7WLWB0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="5uglPpDL4tQwSq7WLWB0-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="540" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5uglPpDL4tQwSq7WLWB0-8" value="Push Alarm Notifications" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="710" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5uglPpDL4tQwSq7WLWB0-9" value="Verify CC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
