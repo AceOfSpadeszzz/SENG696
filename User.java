@@ -83,9 +83,9 @@ public class User extends Agent {
 
     public void showAlert() {
         if (alerted) {
-            System.out.println("The current area is ON ALERT!");
+            System.out.println( location + " area is now on ACTIVE CASE ALERT!\n");
         } else {
-            System.out.println("The current area is safe");
+            System.out.println( "The active case alert of area " + location + " is now DISMISSED.\n");
         }
     }
 
@@ -93,32 +93,32 @@ public class User extends Agent {
         // Class.forName("com.mysql.jdbc.Driver");
         // User log in for further operations.
         Scanner scanner = new Scanner(System.in);
-        System.out.println("YOUR UID");
+        System.out.println("Enter your Health ID: ");
         uId = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("YOUR PWD");
+        System.out.println("Enter your Password: ");
         password = scanner.nextLine();
         Connection connection = DriverManager.getConnection(Config.URL, Config.NAME, Config.PWD);
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         while (!resultSet.next()) {
             System.out.println("Log in FAILED!, Try again!");
-            System.out.println("YOUR UID");
+            System.out.println("Enter your Health ID: ");
             uId = scanner.nextInt();
             scanner.nextLine();
-            System.out.println("YOUR PWD");
+            System.out.println("Enter your Password: ");
             password = scanner.nextLine();
             resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         }
-        System.out.println("YOUR CONDITION: (0-OK, 1-SUS, 2-CONFIRMED)");
+        System.out.println("Enter your COVID status: (0-healthy, 1-suspected, 2-positive confirmed) ");
         healthCondition = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("YOUR LOCATION: ");
+        System.out.println("Enter your current location: ");
         location = scanner.nextLine();
         uploadInfo(statement);
         statement.close();
         connection.close();
-        System.out.println("Condition updated!");
+        System.out.println("COVID information updated!");
     }
 
     public void uploadInfo(Statement statement) throws SQLException {

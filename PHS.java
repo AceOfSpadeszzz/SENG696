@@ -92,10 +92,11 @@ public class PHS extends Agent {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            // PHS issues alert
             Scanner myObj = new Scanner(System.in);
-            System.out.println("Enter the location, enter q to quit");
+            System.out.println("Enter the area to be notified. Enter 'q' to exit: ");
             String location = myObj.nextLine();
-            System.out.println("Enter the status, enter q to quit");
+            System.out.println("Enter the status of this area. 1-Alert, 0-Safe. Enter 'q' to exit: ");
             String status = myObj.nextLine();
             while (!location.equals("q") && !status.equals("q")) {
                 if (status.equals(Config.ALERT)) {
