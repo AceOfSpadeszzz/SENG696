@@ -50,9 +50,9 @@ public class Lab extends Agent {
         ResultSet resultSet = retrieveUserInfo();
         Scanner scanner = new Scanner(System.in);
         while (resultSet.next()) {
-            System.out.println("Please update the users' condition, 0 for healthy, 1 for sus, 2 for confirmed, 3 to skip, 4 to quit");
-            System.out.println("User: " + resultSet.getString("name"));
-            System.out.println("User Condition: " + resultSet.getString("healthCon"));
+            System.out.println("Lab Agent: Please update the users' condition, 0 for healthy, 2 for confirmed, 3 to skip, 4 to quit");
+            System.out.println("Lab Agent: User: " + resultSet.getString("name"));
+            System.out.println("Lab Agent: User Condition: " + resultSet.getString("healthCon"));
             int condition = scanner.nextInt();
             switch (condition) {
                 case 3:

@@ -93,32 +93,32 @@ public class User extends Agent {
         // Class.forName("com.mysql.jdbc.Driver");
         // User log in for further operations.
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your Health ID: ");
+        System.out.println("User Agent: Enter your Health ID: ");
         uId = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Enter your Password: ");
+        System.out.println("User Agent: Enter your Password: ");
         password = scanner.nextLine();
         Connection connection = DriverManager.getConnection(Config.URL, Config.NAME, Config.PWD);
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         while (!resultSet.next()) {
-            System.out.println("Log in FAILED!, Try again!");
-            System.out.println("Enter your Health ID: ");
+            System.out.println("User Agent: Log in FAILED!, Try again!");
+            System.out.println("User Agent: Enter your Health ID: ");
             uId = scanner.nextInt();
             scanner.nextLine();
-            System.out.println("Enter your Password: ");
+            System.out.println("User Agent: Enter your Password: ");
             password = scanner.nextLine();
             resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         }
-        System.out.println("Enter your COVID status: (0-healthy, 1-suspected, 2-positive confirmed) ");
+        System.out.println("User Agent: Enter your COVID status: (0-healthy, 1-suspected, 2-positive confirmed) ");
         healthCondition = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Enter your current location: ");
+        System.out.println("User Agent: Enter your current location: ");
         location = scanner.nextLine();
         uploadInfo(statement);
         statement.close();
         connection.close();
-        System.out.println("COVID information updated!");
+        System.out.println("User Agent: COVID information updated!");
     }
 
     public void uploadInfo(Statement statement) throws SQLException {
@@ -160,9 +160,10 @@ public class User extends Agent {
             initialed = true;
             ACLMessage msg;
             msg = myAgent.blockingReceive();
-            if (msg != null) {
+            while (msg != null) {
                 alerted = msg.getConversationId().equals(Config.ALERT);
                 showAlert();
+                msg = myAgent.blockingReceive();
             }
         }
 

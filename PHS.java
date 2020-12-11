@@ -30,10 +30,11 @@ public class PHS extends Agent {
 
     public void getUpdatedRecords() throws SQLException {
         Connection connection = DriverManager.getConnection(Config.URL, Config.NAME, Config.PWD);
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT loc, addr, healthCon FROM users WHERE checked = 0");
+        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+        ResultSet resultSet = statement.executeQuery("SELECT id, loc, addr, healthCon, checked FROM users WHERE checked = 0");
         while (resultSet.next()) {
             System.out.println(resultSet.getString("loc") + " " + resultSet.getString("addr") + " " + resultSet.getInt("healthCon"));
+            resultSet.updateInt("checked", 1);
         }
     }
 
@@ -94,9 +95,9 @@ public class PHS extends Agent {
             }
             // PHS issues alert
             Scanner myObj = new Scanner(System.in);
-            System.out.println("Enter the area to be notified. Enter 'q' to exit: ");
+            System.out.println("PHS Agent: Enter the area to be notified. Enter 'q' to exit: ");
             String location = myObj.nextLine();
-            System.out.println("Enter the status of this area. 1-Alert, 0-Safe. Enter 'q' to exit: ");
+            System.out.println("PHS Agent: Enter the status of this area. 1-Alert, 0-Safe. Enter 'q' to exit: ");
             String status = myObj.nextLine();
             while (!location.equals("q") && !status.equals("q")) {
                 if (status.equals(Config.ALERT)) {
@@ -104,12 +105,12 @@ public class PHS extends Agent {
                 } else {
                     sendAlert(location, Config.SAFE, ACLMessage.INFORM, myAgent.receiver);
                 }
-                System.out.println("Enter the location, enter q to quit");
+                System.out.println("PHS Agent: Enter the location, enter q to quit");
                 location = myObj.nextLine();
-                System.out.println("Enter the status, enter q to quit");
+                System.out.println("PHS Agent: Enter the status, enter q to quit");
                 status = myObj.nextLine();
             }
-            System.out.println("test");
+            System.out.println("PHS agent closed");
         }
 
         @Override

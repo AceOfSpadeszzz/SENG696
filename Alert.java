@@ -56,10 +56,10 @@ public class Alert extends Agent {
         public void action() {
             ACLMessage msg;
             System.out.println("Alert agent started!");
-            System.out.println(myAgent.getAID());
+            // System.out.println(myAgent.getAID());
             msg = myAgent.blockingReceive();
             while (msg != null) {
-                System.out.println("msg received!");
+                System.out.println("Alert Agent: msg received!");
                 String location = msg.getContent();
                 if (msg.getSender().getLocalName().equals("PHS")) {
                     List<AID> users = myAgent.usrMap.get(location);
