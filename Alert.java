@@ -69,7 +69,7 @@ public class Alert extends Agent {
                         }
                     } else {
                         for (AID user: users) {
-                            sendAlert(Config.ALERT, Config.ALERT, ACLMessage.REQUEST, user);
+                            sendAlert(Config.ALERT, Config.SAFE, ACLMessage.REQUEST, user);
                         }
                     }
                 } else {
