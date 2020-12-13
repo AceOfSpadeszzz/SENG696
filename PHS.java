@@ -106,9 +106,9 @@ public class PHS extends Agent {
                 } else {
                     sendAlert(location, Config.SAFE, ACLMessage.INFORM, myAgent.receiver);
                 }
-                System.out.println("PHS Agent: Enter the location, enter q to quit");
+                System.out.println("PHS Agent: Enter the area to be notified. Enter 'q' to exit: ");
                 location = myObj.nextLine();
-                System.out.println("PHS Agent: Enter the status, enter q to quit");
+                System.out.println("PHS Agent: Enter the status of this area. 1-Alert, 0-Safe. Enter 'q' to exit: ");
                 status = myObj.nextLine();
             }
             System.out.println("PHS agent closed");
