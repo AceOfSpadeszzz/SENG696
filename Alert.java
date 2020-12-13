@@ -63,19 +63,24 @@ public class Alert extends Agent {
                 String location = msg.getContent();
                 if (msg.getSender().getLocalName().equals("PHS")) {
                     List<AID> users = myAgent.usrMap.get(location);
-                    if (msg.getConversationId().equals(Config.ALERT)) {
-                        for (AID user: users) {
-                            sendAlert(Config.ALERT, Config.ALERT, ACLMessage.REQUEST, user);
-                        }
-                    } else {
-                        for (AID user: users) {
-                            sendAlert(Config.ALERT, Config.SAFE, ACLMessage.REQUEST, user);
+                    if (users != null) {
+                        if (msg.getConversationId().equals(Config.ALERT)) {
+                            for (AID user: users) {
+                                sendAlert(Config.ALERT, Config.ALERT, ACLMessage.REQUEST, user);
+                            }
+                        } else {
+                            for (AID user: users) {
+                                sendAlert(Config.ALERT, Config.SAFE, ACLMessage.REQUEST, user);
+                            }
                         }
                     }
                 } else {
                     List<AID> list = myAgent.usrMap.getOrDefault(location, new ArrayList<>());
-                    list.add(msg.getSender());
-                    myAgent.usrMap.put(location, list);
+                    if (list != null) {
+                        list.add(msg.getSender());
+                        myAgent.usrMap.put(location, list);
+                    }
+
                 }
                 msg = myAgent.blockingReceive();
             }

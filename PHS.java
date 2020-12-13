@@ -35,6 +35,7 @@ public class PHS extends Agent {
         while (resultSet.next()) {
             System.out.println(resultSet.getString("loc") + " " + resultSet.getString("addr") + " " + resultSet.getInt("healthCon"));
             resultSet.updateInt("checked", 1);
+            resultSet.updateRow();
         }
     }
 
