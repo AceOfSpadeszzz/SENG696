@@ -1,4 +1,4 @@
-# SENG696 Multi-Agent Covid Alert System
+# SENG696 COVID-19 Alert MEDMAS (MEDical Multi-Agent System)
  Project & Document for the course seng 696
  
  This project simulates the communication between agents for a agent-based covid alert system. There are 4 kinds of agents:
