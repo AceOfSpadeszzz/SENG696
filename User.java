@@ -83,37 +83,38 @@ public class User extends Agent {
 
     public void showAlert() {
         if (alerted) {
-            System.out.println( location + " area is now on ACTIVE CASE ALERT!\n");
+            System.out.println("!!! User Agent: Notification Received: " + location + " area is now on COVID ACTIVE CASE ALERT!\n");
         } else {
-            System.out.println( "The active case alert of area " + location + " is now DISMISSED.\n");
+            System.out.println("!!! User Agent: Notification Received: The COVID active case alert of area " + location + " is now DISMISSED!\n");
         }
     }
 
     public void login() throws SQLException {
         // Class.forName("com.mysql.jdbc.Driver");
         // User log in for further operations.
+        System.out.println("\n--- SWITCH TO USER AGENT ---");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("User Agent: Enter your Health ID: ");
+        System.out.println(" *** User Agent: Enter your Health ID: ");
         uId = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("User Agent: Enter your Password: ");
+        System.out.println(" *** User Agent: Enter your Password: ");
         password = scanner.nextLine();
         Connection connection = DriverManager.getConnection(Config.URL, Config.NAME, Config.PWD);
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         while (!resultSet.next()) {
             System.out.println("User Agent: Log in FAILED!, Try again!");
-            System.out.println("User Agent: Enter your Health ID: ");
+            System.out.println(" *** User Agent: Enter your Health ID: ");
             uId = scanner.nextInt();
             scanner.nextLine();
-            System.out.println("User Agent: Enter your Password: ");
+            System.out.println(" *** User Agent: Enter your Password: ");
             password = scanner.nextLine();
             resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         }
-        System.out.println("User Agent: Enter your COVID status: (0-healthy, 1-suspected, 2-positive confirmed) ");
+        System.out.println(" *** User Agent: Enter your COVID status: (0-Negative, 1-Suspected/Test Result Pending, 2-Positive Confirmed) ");
         healthCondition = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("User Agent: Enter your current location: ");
+        System.out.println(" *** User Agent: Enter your current location: ");
         location = scanner.nextLine();
         uploadInfo(statement);
         statement.close();

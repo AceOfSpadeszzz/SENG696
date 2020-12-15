@@ -47,12 +47,13 @@ public class Lab extends Agent {
     }
 
     public void processUser() throws SQLException {
+        System.out.println("\n--- SWITCH TO LAB AGENT ---");
         ResultSet resultSet = retrieveUserInfo();
         Scanner scanner = new Scanner(System.in);
         while (resultSet.next()) {
-            System.out.println("Lab Agent: Please update the users' condition, 0 for healthy, 2 for confirmed, 3 to skip, 4 to quit");
-            System.out.println("Lab Agent: User: " + resultSet.getString("name"));
-            System.out.println("Lab Agent: User Condition: " + resultSet.getString("healthCon"));
+            System.out.println("Current Case: ID: " + resultSet.getString("Id") + " , Name: " + resultSet.getString("name"));
+            System.out.println(" *** Lab Agent: Please update the user's test result, 0-Negative, 2-Positive, 3-Skip, 4-Quit");
+            // System.out.println("Lab Agent: User Condition: " + resultSet.getString("healthCon"));
             int condition = scanner.nextInt();
             switch (condition) {
                 case 3:
@@ -61,7 +62,9 @@ public class Lab extends Agent {
                     break;
                 default:
                     resultSet.updateInt("healthCon", condition);
+                    resultSet.updateInt("checked",0);
                     resultSet.updateRow();
+                    System.out.println("Lab Agent: COVID test result updated!");
                     break;
             }
         }
