@@ -55,7 +55,7 @@ public class Alert extends Agent {
         @Override
         public void action() {
             ACLMessage msg;
-            // System.out.println("Alert agent started!");
+            System.out.println("--- ALERT AGENT STARTED ---");
             // System.out.println(myAgent.getAID());
             msg = myAgent.blockingReceive();
             while (msg != null) {
@@ -75,6 +75,7 @@ public class Alert extends Agent {
                         }
                     }
                 } else {
+                    System.out.println("Alert Agent: Current user location / address:");
                     for (String loc: location.split("&&")) {
                         System.out.println(loc);
                         List<AID> list = myAgent.usrMap.getOrDefault(loc, new ArrayList<>());

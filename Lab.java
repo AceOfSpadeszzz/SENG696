@@ -68,6 +68,7 @@ public class Lab extends Agent {
                     break;
             }
         }
+        System.out.println("No more pending cases.");
     }
 
     protected void register() {
