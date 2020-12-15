@@ -66,21 +66,23 @@ public class Alert extends Agent {
                     if (users != null) {
                         if (msg.getConversationId().equals(Config.ALERT)) {
                             for (AID user: users) {
-                                sendAlert(Config.ALERT, Config.ALERT, ACLMessage.REQUEST, user);
+                                sendAlert(location, Config.ALERT, ACLMessage.REQUEST, user);
                             }
                         } else {
                             for (AID user: users) {
-                                sendAlert(Config.ALERT, Config.SAFE, ACLMessage.REQUEST, user);
+                                sendAlert(location, Config.SAFE, ACLMessage.REQUEST, user);
                             }
                         }
                     }
                 } else {
-                    List<AID> list = myAgent.usrMap.getOrDefault(location, new ArrayList<>());
-                    if (list != null) {
-                        list.add(msg.getSender());
-                        myAgent.usrMap.put(location, list);
+                    for (String loc: location.split("&&")) {
+                        System.out.println(loc);
+                        List<AID> list = myAgent.usrMap.getOrDefault(loc, new ArrayList<>());
+                        if (list != null) {
+                            list.add(msg.getSender());
+                            myAgent.usrMap.put(loc, list);
+                        }
                     }
-
                 }
                 msg = myAgent.blockingReceive();
             }

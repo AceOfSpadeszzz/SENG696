@@ -81,11 +81,12 @@ public class User extends Agent {
         register();
     }
 
-    public void showAlert() {
+    public void showAlert(String loc) {
+
         if (alerted) {
-            System.out.println( location + " area is now on ACTIVE CASE ALERT!\n");
+            System.out.println(loc + " area is now on ACTIVE CASE ALERT!\n");
         } else {
-            System.out.println( "The active case alert of area " + location + " is now DISMISSED.\n");
+            System.out.println("The active case alert of area " + loc + " is now DISMISSED.\n");
         }
     }
 
@@ -100,7 +101,7 @@ public class User extends Agent {
         password = scanner.nextLine();
         Connection connection = DriverManager.getConnection(Config.URL, Config.NAME, Config.PWD);
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
+        ResultSet resultSet = statement.executeQuery("SELECT Id, addr FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         while (!resultSet.next()) {
             System.out.println("User Agent: Log in FAILED!, Try again!");
             System.out.println("User Agent: Enter your Health ID: ");
@@ -110,6 +111,7 @@ public class User extends Agent {
             password = scanner.nextLine();
             resultSet = statement.executeQuery("SELECT Id FROM users WHERE Id=" + uId + " AND pwd='" + password + "';");
         }
+        address = resultSet.getString("addr");
         System.out.println("User Agent: Enter your COVID status: (0-healthy, 1-suspected, 2-positive confirmed) ");
         healthCondition = scanner.nextInt();
         scanner.nextLine();
@@ -154,7 +156,7 @@ public class User extends Agent {
                 e.printStackTrace();
             }
             setReceiver();
-            sendInfo(location, Config.ALERT_SERVICE, ACLMessage.INFORM, myAgent.receiver);
+            sendInfo(location + "&&" + address, Config.ALERT_SERVICE, ACLMessage.INFORM, myAgent.receiver);
             setLab();
             sendInfo(location, Config.LAB_SERVICE, ACLMessage.INFORM, myAgent.receiver);
             initialed = true;
@@ -162,7 +164,7 @@ public class User extends Agent {
             msg = myAgent.blockingReceive();
             while (msg != null) {
                 alerted = msg.getConversationId().equals(Config.ALERT);
-                showAlert();
+                showAlert(msg.getContent());
                 msg = myAgent.blockingReceive();
             }
         }
