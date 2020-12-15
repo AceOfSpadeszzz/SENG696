@@ -18,7 +18,7 @@ public class Start extends Agent{
         try {
             AgentController agent = controller.createNewAgent(name, className, null);
             agent.start();
-            System.out.println("+++ Created: " + agentID);
+            System.out.println("--- Agent Created: " + agentID);
         }
         catch (Exception e) { e.printStackTrace(); }
     }

@@ -31,9 +31,12 @@ public class PHS extends Agent {
     public void getUpdatedRecords() throws SQLException {
         Connection connection = DriverManager.getConnection(Config.URL, Config.NAME, Config.PWD);
         Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+        System.out.println("\n--- SWITCH TO PHS (Public Health Service) AGENT ---");
+        System.out.println("List of unchecked cases:");
+        System.out.println("Current Location / Home Address / Case Result (0-Negative 2-Positive)");
         ResultSet resultSet = statement.executeQuery("SELECT id, loc, addr, healthCon, checked FROM users WHERE checked = 0");
         while (resultSet.next()) {
-            System.out.println(resultSet.getString("loc") + " " + resultSet.getString("addr") + " " + resultSet.getInt("healthCon"));
+            System.out.println(resultSet.getString("loc") + " / " + resultSet.getString("addr") + " / " + resultSet.getInt("healthCon"));
             resultSet.updateInt("checked", 1);
             resultSet.updateRow();
         }
@@ -96,9 +99,9 @@ public class PHS extends Agent {
             }
             // PHS issues alert
             Scanner myObj = new Scanner(System.in);
-            System.out.println("PHS Agent: Enter the area to be notified. Enter 'q' to exit: ");
+            System.out.println(" *** PHS Agent: Enter the area to be notified. Enter 'q' to exit: ");
             String location = myObj.nextLine();
-            System.out.println("PHS Agent: Enter the status of this area. 1-Alert, 0-Safe. Enter 'q' to exit: ");
+            System.out.println(" *** PHS Agent: Enter the notification type of this area. 1-ALERT, 0-DISMISS. Enter 'q' to exit: ");
             String status = myObj.nextLine();
             while (!location.equals("q") && !status.equals("q")) {
                 if (status.equals(Config.ALERT)) {
@@ -106,9 +109,9 @@ public class PHS extends Agent {
                 } else {
                     sendAlert(location, Config.SAFE, ACLMessage.INFORM, myAgent.receiver);
                 }
-                System.out.println("PHS Agent: Enter the area to be notified. Enter 'q' to exit: ");
+                System.out.println(" *** PHS Agent: Enter the area to be notified. Enter 'q' to exit: ");
                 location = myObj.nextLine();
-                System.out.println("PHS Agent: Enter the status of this area. 1-Alert, 0-Safe. Enter 'q' to exit: ");
+                System.out.println(" *** PHS Agent: Enter the notification type of this area. 1-ALERT, 0-DISMISS. Enter 'q' to exit: ");
                 status = myObj.nextLine();
             }
             System.out.println("PHS agent closed");
